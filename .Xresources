@@ -17,3 +17,13 @@
 *color13:    rgb:ef/9e/be
 *color14:    rgb:71/be/be
 *color15:    rgb:ff/ff/ff
+
+! urxvt
+urxvt*font: xft:DejaVu Sans Mono:pixelsize=14
+urxvt*saveLines: 800
+
+urxvt*perl-ext-common: default,matcher
+urxvt*matcher.button: 1
+
+urxvt*urlLauncher: /usr/bin/chromium-browser
+urxvt*underlineURLs: true
