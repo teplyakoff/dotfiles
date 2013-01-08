@@ -1,6 +1,11 @@
 #!/bin/bash
 
 if [ -f ~/.Xresources ]; then
-    eval "mv ~/.Xresources ~/.Xresources.bak"
+    eval "mv ~/.Xresources ~/.Xresources.dotbak"
 fi
 eval "ln -s ~/projects/dotfiles/.Xresources ~/.Xresources"
+
+if [ -f ~/.themes ]; then
+    eval "mv ~/.themes ~/.themes.dotbak"
+fi
+eval "ln -s ~/projects/dotfiles/.themes ~/.themes"
