@@ -9,3 +9,8 @@ if [ -f ~/.themes ]; then
     eval "mv ~/.themes ~/.themes.dotbak"
 fi
 eval "ln -s ~/projects/dotfiles/.themes ~/.themes"
+
+if [ -f ~/.icons ]; then
+    eval "mv ~/.icons ~/.icons.dotbak"
+fi
+eval "ln -s ~/projects/dotfiles/.icons ~/.icons"
