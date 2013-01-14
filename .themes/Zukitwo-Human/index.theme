@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukitwo-Human
+Comment=An orange varient of Zukitwo-Colors, similar to Shiki-Human
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukitwo-Human
+MetacityTheme=Zukitwo-Colors
+IconTheme=gnome-human

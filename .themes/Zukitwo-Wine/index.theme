@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukitwo-Wine
+Comment=A red varient of Zukitwo-Colors, similar to Shiki-Wine
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukitwo-Wine
+MetacityTheme=Zukitwo-Colors
+IconTheme=gnome-wine

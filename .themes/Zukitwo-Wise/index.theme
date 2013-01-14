@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukitwo-Wise
+Comment=A green varient of Zukitwo-Colors, similar to Shiki-Wise
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukitwo-Wise
+MetacityTheme=Zukitwo-Colors
+IconTheme=gnome-wise

@@ -1,0 +1,86 @@
+# Zukitwo-Dark tema para openbox, por antry.
+#
+# 	Geometria
+# 	=========
+#
+border.width: 									2
+padding.width: 									2
+padding.height: 								2
+window.client.padding.*: 						0
+#
+#	Decoraciones
+#	============
+#
+window.handle.width: 							0
+#
+# 	Menu
+# 	====
+#
+menu.overlap.x: 								0
+menu.overlap.y:									0
+menu.title.bg: 									Flat Gradient Vertical
+menu.title.bg.color: 							#4b4b4b
+menu.title.bg.colorTo: 							#494949
+menu.title.text.color: 							#ffffff
+menu.items.bg: 									Flat Solid
+menu.items.bg.color: 							#494949
+menu.items.text.color: 							#ffffff
+menu.items.disabled.text.color: 				#8a8a8a
+menu.items.active.bg:						 	Flat Solid
+menu.items.active.bg.color: 					#6087a8
+menu.items.active.text.color: 					#ffffff
+menu.border.color: 								#494949
+menu.separator.color: 							#4b4b4b
+#
+# 	Ventanas general
+# 	================
+#
+window.*.label.bg:								Parentrelative
+window.*.button.*.bg: 							Parentrelative
+window.*.border.color: 							#4b4b4b
+window.*.client.color: 							#4b4b4b
+window.*.title.separator.color: 				#4b4b4b
+window.*.title.bg: 								Gradient Vertical Flat
+window.*.title.bg.color: 						#484848
+window.*.title.bg.colorTo: 						#4b4b4b
+#
+#	Ventana activa
+# 	==============
+#
+window.active.label.text.color: 				#f3f3f3
+window.active.button.hover.image.color: 		#303030
+window.active.button.pressed.image.color: 		#303030
+window.active.button.unpressed.image.color: 	#c2c2c2
+window.active.button.disabled.image.color:		#4b4b4b
+#
+#	Ventana inactiva
+#	================
+#
+window.inactive.label.text.color: 				#808080
+window.inactive.button.*.image.color: 			#909090
+#
+# 	OSD
+# 	===
+#
+osd.border.width: 								1
+osd.border.color:  								#494949
+osd.bg: 										Flat Gradient Vertical
+osd.bg.color: 									#4b4b4b
+osd.bg.colorTo: 								#494949
+osd.label.bg: 									Parentrelative
+osd.hilight.bg: 								Flat Solid
+osd.hilight.bg.color: 							#6087a8
+osd.unhilight.bg: 								Flat Solid
+osd.unhilight.bg.color: 						#5e5e5e
+osd.label.text.color: 							#ffffff
+#
+#	Fuentes
+#	=======
+#
+*.font: 										shadow=n
+#
+#	Texto
+#	=====
+#
+menu.title.text.justify: 						Center
+window.label.text.justify: 						Center

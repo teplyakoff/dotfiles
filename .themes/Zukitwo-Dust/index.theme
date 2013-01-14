@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukitwo-Dust
+Comment=A brown varient of Zukitwo-Colors, similar to Shiki-Dust
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukitwo-Dust
+MetacityTheme=Zukitwo-Dust
+IconTheme=gnome-dust

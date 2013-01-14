@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukitwo-Noble
+Comment=A purple varient of Zukitwo-Colors, similar to Shiki-Noble
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukitwo-Noble
+MetacityTheme=Zukitwo-Colors
+IconTheme=gnome-noble

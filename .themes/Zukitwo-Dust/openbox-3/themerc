@@ -1,0 +1,90 @@
+# Zukitwo-Dust tema para openbox, por antry.
+#
+# 	Geometria
+# 	=========
+#
+border.width: 									1
+padding.width: 									2
+padding.height: 								2
+window.client.padding.width: 					0
+window.client.padding.height: 					0
+#
+#	Decoraciones
+#	============
+#
+window.*.grip.bg: 								Flat solid
+window.*.handle.bg: 							Flat Solid
+window.active.grip.bg.color: 					#d2ccc2
+window.inactive.grip.bg.color: 					#d2ccc2
+window.active.handle.bg.color: 					#25221d
+window.inactive.handle.bg.color: 				#d2ccc2
+window.handle.width: 							2
+#
+# 	Menu
+# 	====
+#
+menu.overlap.x: 								0
+menu.overlap.y:									0
+menu.title.bg: 									Flat Solid
+menu.title.bg.color: 							#25221d
+menu.title.text.color: 							#a98866
+menu.items.bg: 									Flat Solid
+menu.items.bg.color: 							#25221d
+menu.items.text.color: 							#f0f0f0
+menu.items.disabled.text.color: 				#8a8a8a
+menu.items.active.bg:						 	Flat Solid
+menu.items.active.bg.color: 					#a98866
+menu.items.active.text.color: 					#f0f0f0
+menu.border.color: 								#a98866
+menu.separator.color: 							#25221d
+#
+# 	Ventanas general
+# 	================
+#
+window.*.label.bg:								Parentrelative
+window.*.button.*.bg: 							Parentrelative
+window.*.border.color: 							#a98866
+window.*.client.color: 							#25221d
+window.*.title.separator.color: 				#25221d
+window.*.title.bg: 								Flat Solid
+window.*.title.bg.color: 						#25221d
+#
+#	Ventana activa
+# 	==============
+#
+#
+window.active.label.text.color: 				#f0f0f0
+window.active.button.hover.image.color: 		#a98866
+window.active.button.pressed.image.color: 		#d4d4cb
+window.active.button.unpressed.image.color: 	#d4d4cb
+#
+#	Ventana inactiva
+#	================
+#
+window.inactive.label.text.color: 				#8a8a8a
+window.inactive.button.*.image.color: 			#d4d4cb
+#
+# 	OSD
+# 	===
+#
+osd.border.width: 								1
+osd.border.color:  								#a98866
+osd.bg: 										Flat Solid
+osd.bg.color: 									#25221d
+osd.label.bg: 									Parentrelative
+osd.hilight.bg: 								Flat Solid
+osd.hilight.bg.color: 							#a98866
+osd.unhilight.bg: 								Flat Solid
+osd.unhilight.bg.color: 						#d2ccc2
+osd.label.text.color: 							#f0f0f0
+#
+#	Fuentes
+#	=======
+#
+*.font: 										shadow=n
+#
+#	Texto
+#	=====
+#
+menu.title.text.justify: 						Center
+window.label.text.justify: 						Center

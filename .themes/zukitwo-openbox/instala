@@ -1,0 +1,122 @@
+#!/bin/bash
+
+ROOT_ID=0
+TODOS='/usr/share/themes'
+if [ -d "$HOME/.themes" ]; then
+	USUARIO="$HOME/.themes"
+else 
+	mkdir "$HOME/.themes"
+	USUARIO="$HOME/.themes"
+fi
+OB_DIR='openbox-3'
+PATH=$PWD
+
+instala()
+{
+	case $1 in
+		[Nn])
+			exit 0
+		;;
+		[SsYy])
+			if [ $2 = $ROOT_ID ]; then
+				for DIR in $PATH/*; do
+				if [ -d $DIR ]; then
+					NOMBRE_DIR=`/usr/bin/basename $DIR`
+					if [ -d "${TODOS}/${NOMBRE_DIR}" ]; then
+						if [ -d "${TODOS}/${NOMBRE_DIR}/$OB_DIR" ]; then
+							echo "Parace que el tema ${NOMBRE_DIR} ya esta instalado, deseas remplazarlo?\t s/n"
+							read remplazarlo
+							case $remplazarlo in
+								[SsYy])
+									/bin/rm -r ${TODOS}/${NOMBRE_DIR}/${OB_DIR}
+									/bin/cp -ar ${DIR}/${OB_DIR} ${TODOS}/${NOMBRE_DIR}
+									echo "remplazado: ${TODOS}/${NOMBRE_DIR}/${OB_DIR}"
+								;;
+								[Nn])
+								;;
+								*)
+								;;
+							esac
+						else
+							/bin/cp -ar ${DIR}/${OB_DIR} ${TODOS}/${NOMBRE_DIR}
+							echo "copiado: ${DIR}/${OB_DIR}"
+						fi
+					else
+						/bin/cp -ar ${DIR} ${TODOS}
+						echo "copiado: ${DIR}"
+					fi
+				fi
+				done
+				enlazar_botones $TODOS
+			else
+				for DIR in $PATH/*; do
+				if [ -d $DIR ]; then
+					NOMBRE_DIR=`/usr/bin/basename $DIR`
+					if [ -d "${USUARIO}/${NOMBRE_DIR}" ]; then
+						if [ -d "${USUARIO}/${NOMBRE_DIR}/$OB_DIR" ]; then
+							echo "Parace que el tema ${NOMBRE_DIR} ya esta instalado, deseas remplazarlo?\t s/n"
+							read remplazarlo
+							case $remplazarlo in
+								[SsYy])
+									/bin/rm -r ${USUARIO}/${NOMBRE_DIR}/${OB_DIR}
+									/bin/cp -ar ${DIR}/${OB_DIR} ${USUARIO}/${NOMBRE_DIR}
+									echo "remplazado: ${USUARIO}/${NOMBRE_DIR}/${OB_DIR}"
+								;;
+								[Nn])
+								;;
+								*)
+								;;
+							esac
+						else
+							/bin/cp -ar ${DIR}/${OB_DIR} ${USUARIO}/${NOMBRE_DIR}
+							echo "copiado: ${DIR}/${OB_DIR}"
+						fi
+					else
+						/bin/cp -ar ${DIR} ${USUARIO}
+						echo "copiado: ${DIR}"
+					fi
+				fi
+				done
+				enlazar_botones $USUARIO
+			fi
+		;;
+		*)
+			echo -e "\e[1;31m Invalido!!"
+			exit 1
+		;;
+	esac
+}
+
+enlazar_botones()
+{
+	PATH=$1
+	for tema in ${PATH}/Zukitwo?*; do
+		for boton in "${PATH}/Zukitwo/${OB_DIR}/*.xbm"; do
+			/bin/ln -s $boton "$tema/${OB_DIR}"
+		done
+	done
+}
+
+
+if [ $UID = $ROOT_ID ]; then
+	echo -e "\e[0;32mLos temas se instalaran en $TODOS   \e[0;31m S/N:\t \e[0;m"
+	read continua
+	instala $continua $UID
+else
+	echo -e "\e[0;32mLos temas se instalaran en $USUARIO   \e[0;31m S/N:\t \e[0;m"
+	read continua
+	instala $continua $UID
+fi
+
+echo "Limpiar directorio actual?  s/n:\t"
+read limpiar
+case limpiar in
+	[SsYy])
+		/bin/rm -rf ./Zukitwo*
+	;;
+	*)
+	;;
+esac
+
+echo "Terminado"
+exit 0

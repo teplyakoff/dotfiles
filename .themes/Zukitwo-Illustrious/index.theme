@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Zukitwo-Illustrious
+Comment=A pink varient of Zukitwo-Colors, similar to Shiki-Illustrious
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Zukitwo-Illustrious
+MetacityTheme=Zukitwo-Colors
+IconTheme=gnome-illustrious
