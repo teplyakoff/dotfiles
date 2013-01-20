@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="system-menu" label="System">
+  <item label="Openbox Configuration Manager">
+    <action name="Execute">
+      <command>obconf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Tint2 Config">
+    <action name="Execute">
+      <command>tint2conf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="GTK Theme Switch">
+    <action name="Execute">
+      <command>gtk-theme-switch2</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="Autostart">
+    <action name="Execute">
+      <command>leafpad ~/.config/openbox/autostart</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="menu.xml">
+    <action name="Execute">
+      <command>leafpad ~/.config/openbox/menu.xml</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <separator />
+  <item label="Reconfigure Openbox">
+    <action name="Reconfigure" />
+  </item>
+</menu>
+
+<menu id="session" label="Session">
+  <item label="Log Out">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+  <separator />
+  <item label="Reboot">
+  <action name="Execute">
+    <prompt>yes</prompt>
+    <execute>systemctl reboot</execute>
+  </action>
+  </item>
+  <item label="Shutdown">
+  <action name="Execute">
+    <prompt>yes</prompt>
+    <execute>systemctl poweroff</execute>
+  </action>
+  </item>
+</menu>
+
+<menu id="apps" label="Applications" execute="cat ~/.cache/applications.xml" />
+
+<menu id="root-menu" label="Openbox 3">
+  <item label="Terminal">
+    <action name="Execute">
+      <command>urxvt</command>
+    </action>
+  </item>
+  <item label="File Manager">
+    <action name="Execute">
+      <command>spacefm</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Chromium">
+    <action name="Execute">
+      <command>chromium</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Chromium</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Sublime">
+    <action name="Execute">
+      <command>subl</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <menu id="apps" />
+  <menu id="device-menu" />
+  <menu id="system-menu"/>
+  <separator />
+  <menu id="session" />
+</menu>
+
+</openbox_menu>
