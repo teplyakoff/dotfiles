@@ -1,0 +1,26 @@
+pacman -S ttf-dejavu
+pacman -S urxvt
+pacman -S chromium flashplugin
+pacman -S obconf obmenu
+pacman -S wgetpaste
+pacman -S tint2
+pacman -S spacefm
+pacman -S git tk
+pacman -S openssh
+pacman -S xclip
+pacman -S unzip
+pacman -S gtk-engines
+pacman -S gpicview
+pacman -S skype
+yaourt ttf-ms-fonts
+# rmmod pcspkr
+# echo "blacklist pcspkr" > /etc/modprobe.d/nobeeep.conf
+pacman -S archlinux-xdg-menu !!!
+yaourt dropbox
+yaourt fbxkb
+pacman -S xorg-xkbevd
+pacman -S lxappearance
+pacman -S dnsutils ??
+
+pacman -S pyxdg
+pacman -S gnome-menus
