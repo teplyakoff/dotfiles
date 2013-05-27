@@ -25,3 +25,7 @@ alias gdiw="git diff --color-words"
 alias ghist="git log --pretty=tformat:'%ad %Cgreen%s %Cblue%an %Cred%d%Creset' --graph --date=short"
 # Display last commit change
 alias gstat="git log --stat --no-merges --max-count=1"
+alias giad="git add"
+alias gist="git status"
+alias gico="git commit"
+alias gidi="git diff"
