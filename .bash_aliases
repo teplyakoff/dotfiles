@@ -19,9 +19,20 @@ alias myip="curl ifconfig.me"
 
 ## Git
 alias g="git"
-alias gdif="git diff --color"
 alias gdiw="git diff --color-words"
+## Display colored commit history with dates and tags, without object hashes
+alias ghist="git log --pretty=tformat:'%ad %Cgreen%s %Cblue%an %Cred%d%Creset' --graph --date=short"
+## Display last commit change
+alias gstat="git log --stat --no-merges --max-count=1"
+alias gist="git status"
+alias giad="git add"
+alias gico="git commit"
+alias gidi="git diff --color"
+
 # Display colored commit history with dates and tags, without object hashes
 alias ghist="git log --pretty=tformat:'%ad %Cgreen%s %Cblue%an %Cred%d%Creset' --graph --date=short"
 # Display last commit change
 alias gstat="git log --stat --no-merges --max-count=1"
+
+alias sshfs-sandbox="sshfs sandbox:/var/www/vhosts/teplyakov/htdocs ~/projects/sandbox/"
+
