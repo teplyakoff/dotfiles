@@ -1,17 +1,11 @@
 [core]
-	editor = vim
-[user]
-	name = Dmitry Teplyakov
-	email = dmitry.teplyakoff@gmail.com
+    editor = vim
 [color]
-	ui = true
+    ui = true
 [alias]
-    ad = add
-    co = commit
-    st = status
-    mr = merge
-    ch = checkout
-    chm = checkout master
+    co = checkout
     br = branch
-    brd = branch -d
-    brD = branch -D
+    ci = commit
+    st = status
+    unstage = reset HEAD --
+    last = log -1 HEAD
