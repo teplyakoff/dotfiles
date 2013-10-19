@@ -1,6 +1,4 @@
-#
-# ~/.bash_aliases
-#
+# .bash_aliases
 
 alias ping='ping -c 5'
 

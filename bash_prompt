@@ -1,6 +1,4 @@
-#
-# ~/.bash_prompt
-#
+# .bash_prompt
 
 clr_end='\[\e[0m\]'
 clr_user='\[\e[1;32m\]'

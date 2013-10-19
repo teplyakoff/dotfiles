@@ -11,7 +11,7 @@ log() {
 init_bash() {
     log "Initializing bash configs"
 
-    files=(bashrc bash_aliases bash_functions bash_prompt)
+    files=(bashrc bash_profile bash_aliases bash_functions bash_prompt)
 
     for file in ${files[*]}; do
         log "Trying to find '.$file'"
