@@ -27,6 +27,31 @@ init_bash() {
     done
 }
 
+init_git() {
+    log "Initializing git configs"
+
+    if [[ -e ~/.gitconfig || -L ~/.gitconfig ]]; then
+        log "Backing up ~/.gitconfig"
+        mv ~/.gitconfig $backup_dir/.gitconfig
+    fi
+
+    ln -s $(pwd)/gitconfig ~/.gitconfig
+
+    if [[ ! -e ~/.gitconfig.user ]]; then
+        while [[ ! -n $git_name ]]; do
+            read -p "Enter git name: " git_name
+        done
+
+        while [[ ! -n $git_email ]]; do
+            read -p "Enter git email: " git_email
+        done
+
+        echo "[user]" > ~/.gitconfig.user
+        echo "    name = $git_name" >> ~/.gitconfig.user
+        echo "    email = $git_email" >> ~/.gitconfig.user
+    fi
+}
+
 while getopts ":v" opt; do
     case $opt in
         v)
@@ -44,4 +69,5 @@ log "Backup dir: $backup_dir"
 mkdir $backup_dir
 
 init_bash
+init_git
 
