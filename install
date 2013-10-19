@@ -1,0 +1,47 @@
+#!/bin/bash
+
+verbose=0;
+
+log() {
+    if [[ $verbose -eq 1 ]]; then
+        echo "$@"
+    fi
+}
+
+init_bash() {
+    log "Initializing bash configs"
+
+    files=(bashrc bash_aliases bash_functions bash_prompt)
+
+    for file in ${files[*]}; do
+        log "Trying to find '.$file'"
+        if [[ -e ~/.$file || -L ~/.$file ]]; then
+            log "Backing up ~/.$file"
+            mv ~/.$file $backup_dir/.$file
+        fi
+    done
+
+    for file in ${files[*]}; do
+        log "Create symlink for '.$file'"
+        ln -s $(pwd)/$file ~/.$file
+    done
+}
+
+while getopts ":v" opt; do
+    case $opt in
+        v)
+            verbose=1
+	;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit 1
+        ;;
+    esac
+done
+
+backup_dir="backup/$(date +%Y%m%d.%H%M.%s)"
+log "Backup dir: $backup_dir"
+mkdir $backup_dir
+
+init_bash
+
