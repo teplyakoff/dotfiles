@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'UltiSnips'
 Bundle 'Lokaltog/powerline'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on  " required!
 "}}}
@@ -75,6 +76,13 @@ set ff=unix " default file format
 "}}}
 
 "{{{ Appearance
+syntax enable
+set background=dark
+colorscheme solarized
+
+" remove toolbar
+set guioptions-=T
+
 " show line numbers
 set nu
 
