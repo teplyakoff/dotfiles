@@ -85,6 +85,7 @@ init_vim() {
 
     if [[ ! -e ~/.fonts/$powerline_font ]]; then
         cp "fonts/$powerline_font" ~/.fonts/
+        fc-cache -vf ~/.fonts
     else
         log "Font '$powerline_font' already installed!"
     fi
