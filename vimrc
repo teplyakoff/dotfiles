@@ -12,11 +12,15 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'UltiSnips'
+
 Bundle 'bling/vim-airline'
 Bundle 'lsdr/monokai'
 Bundle 'ervandew/supertab'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-surround'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'coderifous/textobj-word-column.vim'
 
 filetype plugin indent on  " required!
 "}}}
