@@ -89,6 +89,10 @@ init_vim() {
     else
         log "Font '$powerline_font' already installed!"
     fi
+
+    if ! hash wmctrl 2>/dev/null; then
+        echo " NOTE: Install 'wmctrl' to start gVim maximized"
+    fi
 }
 
 while getopts ":v" opt; do

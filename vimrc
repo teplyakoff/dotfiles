@@ -24,6 +24,12 @@ Bundle 'coderifous/textobj-word-column.vim'
 filetype plugin indent on  " required!
 "}}}
 
+function Maximize_Window()
+  silent !wmctrl -r :ACTIVE: -b add,maximized_vert,maximized_horz
+endfunction
+
+au GUIEnter * call Maximize_Window()
+
 "{{{ Airline
 " Powerline escape fix
 if ! has('gui_running')
