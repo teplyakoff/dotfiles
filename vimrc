@@ -14,11 +14,14 @@ Bundle 'gmarik/vundle'
 Bundle 'UltiSnips'
 Bundle 'bling/vim-airline'
 Bundle 'lsdr/monokai'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/syntastic'
 
 filetype plugin indent on  " required!
 "}}}
 
-"{{{ Powerline
+"{{{ Airline
 " Powerline escape fix
 if ! has('gui_running')
     set ttimeoutlen=10
@@ -40,6 +43,14 @@ set noshowmode
 if has('gui_running')
   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 10
 endif
+"}}}
+
+"{{{ supertab
+" use the tab key as the tab key
+let g:SuperTabMappingTabLiteral = '<tab>'
+
+let g:SuperTabMappingForward = '<c-n>'
+let g:SuperTabMappingBackward = '<c-p>'
 "}}}
 
 "{{{ Search
