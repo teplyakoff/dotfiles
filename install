@@ -89,17 +89,6 @@ init_vim() {
     else
         log "Font '$powerline_font' already installed!"
     fi
-
-    log "Configuration for vim's powerline"
-    if [[ -d ~/.config/powerline || -L ~/.config/powerline ]]; then
-        if [[ ! -d $backup_dir/.config ]]; then
-            mkdir $backup_dir/.config
-        fi
-
-        mv ~/.config/powerline $backup_dir/.config/
-    fi
-
-    ln -s $(pwd)/config/powerline ~/.config/powerline
 }
 
 while getopts ":v" opt; do

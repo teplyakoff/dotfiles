@@ -12,8 +12,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'UltiSnips'
-Bundle 'Lokaltog/powerline'
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
+Bundle 'lsdr/monokai'
 
 filetype plugin indent on  " required!
 "}}}
@@ -28,6 +28,9 @@ if ! has('gui_running')
         au InsertLeave * set timeoutlen=1000
     augroup END
 endif
+
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
 
 " Always display the statusline in all windows
 set laststatus=2
@@ -77,11 +80,14 @@ set ff=unix " default file format
 
 "{{{ Appearance
 syntax enable
-set background=dark
-colorscheme solarized
+colorscheme monokai
 
 " remove toolbar
 set guioptions-=T
+" remove right-hand scroll bar
+set guioptions-=r
+" remove left-hand scroll bar when vertical split
+set guioptions-=L
 
 " show line numbers
 set nu
