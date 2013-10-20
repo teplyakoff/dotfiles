@@ -5,7 +5,6 @@ set nocompatible
 filetype off      " required!
 
 set rtp+=~/.vim/bundle/vundle/
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 call vundle#rc()
 
 " let Vundle manage Vundle
