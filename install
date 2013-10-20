@@ -52,11 +52,60 @@ init_git() {
     fi
 }
 
+init_vim() {
+    log "Initializing vim configs"
+
+    if [[ -e ~/.vimrc || -L ~/.vimrc ]]; then
+        log "Backing up '~/.vimrc'"
+        mv ~/.vimrc $backup_dir/.vimrc
+    fi
+
+    log "Creating symbolic link for '.vimrc'"
+    ln -s $(pwd)/vimrc ~/.vimrc
+
+    if [[ -d ~/.vim ]]; then
+        log "Backing up '~/.vim'"
+        mv ~/.vim $backup_dir/.vim
+    fi
+
+    mkdir -p ~/.vim/bundle
+
+    log "Cloning Vundle"
+    git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+    log "Installing vim bundles"
+    vim +BundleInstall +qall
+
+    log "Installing powerline's patched font"
+    if [[ ! -d ~/.fonts ]]; then
+        mkdir ~/.fonts
+    fi
+
+    powerline_font="DejaVu Sans Mono for Powerline.ttf"
+
+    if [[ ! -e ~/.fonts/$powerline_font ]]; then
+        cp "fonts/$powerline_font" ~/.fonts/
+    else
+        log "Font '$powerline_font' already installed!"
+    fi
+
+    log "Configuration for vim's powerline"
+    if [[ -d ~/.config/powerline || -L ~/.config/powerline ]]; then
+        if [[ ! -d $backup_dir/.config ]]; then
+            mkdir $backup_dir/.config
+        fi
+
+        mv ~/.config/powerline $backup_dir/.config/
+    fi
+
+    ln -s $(pwd)/config/powerline ~/.config/powerline
+}
+
 while getopts ":v" opt; do
     case $opt in
         v)
             verbose=1
-	;;
+        ;;
         \?)
             echo "Invalid option: -$OPTARG" >&2
             exit 1
@@ -70,4 +119,5 @@ mkdir $backup_dir
 
 init_bash
 init_git
+init_vim
 
