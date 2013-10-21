@@ -63,6 +63,11 @@ init_vim() {
     log "Creating symbolic link for '.vimrc'"
     ln -s $(pwd)/vimrc ~/.vimrc
 
+    if [[ -e ~/.gvimrc || -L ~/.gvimrc ]]; then
+        log "Backing up '~/.vimrc'"
+        mv ~/.gvimrc $backup_dir/.gvimrc
+    fi
+
     if [[ -d ~/.vim ]]; then
         log "Backing up '~/.vim'"
         mv ~/.vim $backup_dir/.vim
