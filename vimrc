@@ -11,6 +11,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'UltiSnips'
+Bundle 'PreserveNoEOL'
 
 Bundle 'bling/vim-airline'
 Bundle 'lsdr/monokai'
