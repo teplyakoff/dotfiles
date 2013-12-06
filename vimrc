@@ -211,6 +211,20 @@ map <leader>tm :tabmove
 " Super useful when editing files in the same directory
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
+" Splits navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Edit my vimrc
+nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+
+" Select all lines of just entered text
+nnoremap <leader>v V`]
+" Remove trailing spaces
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
 "}}}
 
 set autochdir
@@ -224,4 +238,27 @@ map <leader>h :nohl<cr>
 "{{{ Custom
 "source ~/.vim/settings.vim
 "}}}
+
+
+nmap <C-Tab> :tabnext<CR>
+nmap <C-S-Tab> :tabprevious<CR>
+map <C-Tab> :tabnext<CR>
+map <C-S-Tab> :tabprevious<CR>
+imap <C-Tab> :tabnext<CR>
+imap <C-S-Tab> :tabprevious<CR>
+
+no <down> ddp
+no <up> ddkP
+
+nmap G Gzz
+nmap n nzz
+nmap N Nzz
+nmap } }zz
+nmap { {zz
+
+imap <leader>' ''<Esc>i
+imap <leader>" ""<Esc>i
+imap <leader>( ()<Esc>i
+imap <leader>[ []<Esc>i
+imap <leader>{ {}<Esc>i
 
