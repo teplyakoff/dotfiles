@@ -111,7 +111,8 @@ set guioptions-=r
 set guioptions-=L
 
 " show line numbers
-set nu
+set number
+set relativenumber
 
 " always show cursor
 set ruler
