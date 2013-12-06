@@ -81,6 +81,9 @@ init_vim() {
     log "Installing vim bundles"
     vim +BundleInstall +qall
 
+    log "Creating symbolic link for '.vim/UltiSnips'"
+    ln -s $(pwd)/vim/UltiSnips ~/.vim/UltiSnips
+
     log "Installing powerline's patched font"
     if [[ ! -d ~/.fonts ]]; then
         mkdir ~/.fonts
