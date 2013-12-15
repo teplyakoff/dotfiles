@@ -274,6 +274,7 @@ endif
 
 nnoremap <silent> <F9> :TagbarOpenAutoClose<CR>
 
-let g:tagbar_phpctags_bin='~/.vim/bundle/tagbar-phpctags.vim/bin/phpctags'
-let g:tagbar_phpctags_memory_limit='512M'
+let g:tagbar_phpctags_bin = '~/.vim/bundle/tagbar-phpctags.vim/bin/phpctags'
+let g:tagbar_phpctags_memory_limit = '512M'
+let g:tagbar_sort = 0
 
