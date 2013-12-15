@@ -101,6 +101,13 @@ init_vim() {
     if ! hash wmctrl 2>/dev/null; then
         echo " NOTE: Install 'wmctrl' to start gVim maximized"
     fi
+
+    log "Installing ctags"
+    sudo yum install -y ctags
+
+    log "Making phpctags"
+    cd ~/.vim/bundle/tagbar-phpctags.vim
+    make
 }
 
 while getopts ":v" opt; do

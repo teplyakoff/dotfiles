@@ -22,6 +22,9 @@ Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'coderifous/textobj-word-column.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'vim-php/tagbar-phpctags.vim'
+
 
 filetype plugin indent on  " required!
 "}}}
@@ -268,4 +271,9 @@ imap <leader>{ {}<Esc>i
 if has("autocmd")
     autocmd BufRead,BufNewFile *.sql set filetype=mysql
 endif
+
+nnoremap <silent> <F9> :TagbarOpenAutoClose<CR>
+
+let g:tagbar_phpctags_bin='~/.vim/bundle/tagbar-phpctags.vim/bin/phpctags'
+let g:tagbar_phpctags_memory_limit='512M'
 
