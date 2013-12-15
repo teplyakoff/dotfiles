@@ -24,6 +24,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'coderifous/textobj-word-column.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'vim-php/tagbar-phpctags.vim'
+Bundle 'krisajenkins/vim-projectlocal'
 
 
 filetype plugin indent on  " required!
