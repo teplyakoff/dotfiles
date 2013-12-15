@@ -12,6 +12,7 @@ Bundle 'gmarik/vundle'
 
 Bundle 'UltiSnips'
 Bundle 'PreserveNoEOL'
+Bundle 'bufexplorer.zip'
 
 Bundle 'bling/vim-airline'
 Bundle 'lsdr/monokai'
@@ -262,4 +263,9 @@ imap <leader>" ""<Esc>i
 imap <leader>( ()<Esc>i
 imap <leader>[ []<Esc>i
 imap <leader>{ {}<Esc>i
+
+" Set default *.sql type to mysql
+if has("autocmd")
+    autocmd BufRead,BufNewFile *.sql set filetype=mysql
+endif
 
