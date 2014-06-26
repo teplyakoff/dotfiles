@@ -14,3 +14,7 @@ fi
 for file in ~/.bash_{aliases,functions,prompt}; do
     [ -r "$file" ] && source "$file"
 done
+
+HISTSIZE=2000
+HISTFILESIZE=500000
+
