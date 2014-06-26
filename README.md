@@ -1,4 +1,5 @@
-home
+Dot can
 ====
 
-Dotfiles in home
+Store your dotfiles!
+

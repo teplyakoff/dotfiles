@@ -1,0 +1,11 @@
+# .bash_prompt
+
+clr_end='\[\e[0m\]'
+clr_user='\[\e[1;32m\]'
+clr_host='\[\e[0;32m\]'
+clr_dir='\[\e[0;94m\]'
+clr_final='\[\e[1;32m\]'
+clr_time='\[\e[1;35m\]'
+
+PS1="$clr_time\t$clr_end $clr_user\u$clr_end$clr_host@\h$clr_end $clr_dir\W$clr_end $clr_final\$$clr_end "
+
