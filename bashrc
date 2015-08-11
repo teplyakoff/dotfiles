@@ -9,6 +9,7 @@ if [[ -f /etc/bashrc ]]; then
 fi
 
 HISTSIZE=10000
+EDITOR=vi
 
 for file in ~/.bash_{aliases,functions,prompt}; do
     [[ -r "$file" ]] && source "$file"

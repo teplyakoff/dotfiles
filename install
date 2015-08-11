@@ -128,5 +128,5 @@ mkdir $backup_dir
 
 init_bash
 init_git
-init_vim
+#init_vim
 
